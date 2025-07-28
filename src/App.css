@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.input-text {
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 1rem;
+}
+
+.button {
+  margin: 5px;
+}
