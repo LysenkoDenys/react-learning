@@ -5,7 +5,9 @@
   text-align: center;
 }
 
-.input-text {
+.input-text,
+.password,
+.label {
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 1rem;
@@ -13,4 +15,10 @@
 
 .button {
   margin: 5px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
