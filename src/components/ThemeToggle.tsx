@@ -3,7 +3,7 @@ import { useState } from 'react';
 const ThemeToggle: React.FC = () => {
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
   return (
-    <div className={isDarkTheme ? 'dark-theme' : 'ligth-theme'}>
+    <div className={isDarkTheme ? 'dark-theme' : 'light-theme'}>
       <p>State now is {isDarkTheme ? 'dark' : 'light'} theme</p>
       <button
         type="button"
