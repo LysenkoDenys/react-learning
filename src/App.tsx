@@ -2,11 +2,12 @@ import './App.css';
 // import Counter from './components/Counter';
 // import Form from './components/Form';
 // import Greetings from './components/Greetings';
-import MyComponent from './components/MyComponent';
+// import MyComponent from './components/MyComponent';
 // import ThemeToggle from './components/ThemeToggle';
 // import Header from './components/Header';
 // import LoginForm from './components/LoginForm';
 // import ParentComponent from './components/ParentComponent';
+import UserProfile from './components/UserProfile';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
       <Counter />
       <ThemeToggle />
       <Greetings name="John" surname="Lennon" />
-      <Greetings name="James" /> */}
-      <MyComponent />
+      <Greetings name="James" />
+      <MyComponent /> */}
+      <UserProfile />
     </>
   );
 }
