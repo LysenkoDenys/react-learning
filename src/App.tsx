@@ -1,4 +1,5 @@
 import './App.css';
+import UserLoginControl from './components/UserLoginControl';
 // import Counter from './components/Counter';
 // import Form from './components/Form';
 // import Greetings from './components/Greetings';
@@ -7,7 +8,7 @@ import './App.css';
 // import Header from './components/Header';
 // import LoginForm from './components/LoginForm';
 // import ParentComponent from './components/ParentComponent';
-import UserProfile from './components/UserProfile';
+// import UserProfile from './components/UserProfile';
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
       <ThemeToggle />
       <Greetings name="John" surname="Lennon" />
       <Greetings name="James" />
-      <MyComponent /> */}
-      <UserProfile />
+      <MyComponent />
+      <UserProfile /> */}
+      <UserLoginControl />
     </>
   );
 }
