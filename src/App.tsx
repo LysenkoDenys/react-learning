@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './App.css';
-import TestWithReference from './components/TestWithReference';
+import CalculationWithoutMemo from './components/CalculationWithoutMemo';
+import UseMemoCalculation from './components/UseMemoCalculation';
+// import TestWithReference from './components/TestWithReference';
 // import UserLoginControl from './components/UserLoginControl';
 // import CurrencyContext from './components/CurrencyContext';
 // import CurrenciesContainer from './components/CurrenciesContainer';
@@ -17,8 +19,15 @@ import TestWithReference from './components/TestWithReference';
 
 function App() {
   // const [price, setPrice] = useState(0);
-  const [isDark, setIsDark] = useState(false);
+  // const [isDark, setIsDark] = useState(false);
+  const [count, setCount] = useState(0);
+  const [myArray, setMyArray] = useState<number[]>([]);
   // const [randomNewReferrer, setRandomNewReferrer] = useState('12345');
+
+  const handleSetMyArray = () => {
+    setMyArray([...myArray, Math.floor(Math.random() * 100)]);
+  };
+
   return (
     <>
       {/* <Header />
@@ -48,7 +57,7 @@ function App() {
           <CurrencyDisplay currency="Tugrics" rate={2} />
         </div>
       </CurrencyContext.Provider> */}
-      <div className="">
+      {/* <div className="">
         <label>
           <input
             type="checkbox"
@@ -67,7 +76,19 @@ function App() {
         referrer="wizard_of_oz"
         productId={123}
         theme={isDark ? 'dark' : 'light'}
-      />
+      /> */}
+      <div className="component-container">
+        <div className="">Container value: {count}</div>
+        <button className="button" onClick={() => setCount(count + 1)}>
+          Re-render
+        </button>
+
+        <button className="button" onClick={handleSetMyArray}>
+          Change the Array
+        </button>
+        <CalculationWithoutMemo numbers={myArray} />
+        {/* <UseMemoCalculation numbers={myArray} /> */}
+      </div>
     </>
   );
 }

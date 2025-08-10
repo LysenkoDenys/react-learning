@@ -56,3 +56,11 @@
   display: block;
   margin-bottom: 10px;
 }
+
+.component-container {
+  border: 1px solid #ba43c1;
+  width: 100%;
+  height: 50%;
+  padding: 20%;
+  border-radius: 12px;
+}
