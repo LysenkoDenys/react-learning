@@ -1,7 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import './App.css';
-import CalculationWithoutMemo from './components/CalculationWithoutMemo';
-import UseMemoCalculation from './components/UseMemoCalculation';
+// import CalculationWithoutMemo from './components/CalculationWithoutMemo';
+// import UseMemoCalculation from './components/UseMemoCalculation';
+import MeasuredHeight from './components/MeasuredHeight';
 // import TestWithReference from './components/TestWithReference';
 // import UserLoginControl from './components/UserLoginControl';
 // import CurrencyContext from './components/CurrencyContext';
@@ -20,13 +21,13 @@ import UseMemoCalculation from './components/UseMemoCalculation';
 function App() {
   // const [price, setPrice] = useState(0);
   // const [isDark, setIsDark] = useState(false);
-  const [count, setCount] = useState(0);
-  const [myArray, setMyArray] = useState<number[]>([]);
+  // const [count, setCount] = useState(0);
+  // const [myArray, setMyArray] = useState<number[]>([]);
   // const [randomNewReferrer, setRandomNewReferrer] = useState('12345');
 
-  const handleSetMyArray = () => {
-    setMyArray([...myArray, Math.floor(Math.random() * 100)]);
-  };
+  // const handleSetMyArray = () => {
+  //   setMyArray([...myArray, Math.floor(Math.random() * 100)]);
+  // };
 
   return (
     <>
@@ -77,7 +78,7 @@ function App() {
         productId={123}
         theme={isDark ? 'dark' : 'light'}
       /> */}
-      <div className="component-container">
+      {/* <div className="component-container">
         <div className="">Container value: {count}</div>
         <button className="button" onClick={() => setCount(count + 1)}>
           Re-render
@@ -86,9 +87,10 @@ function App() {
         <button className="button" onClick={handleSetMyArray}>
           Change the Array
         </button>
-        <CalculationWithoutMemo numbers={myArray} />
-        {/* <UseMemoCalculation numbers={myArray} /> */}
-      </div>
+        <CalculationWithoutMemo numbers={myArray} /> */}
+      {/* <UseMemoCalculation numbers={myArray} /> */}
+      {/* </div> */}
+      <MeasuredHeight />
     </>
   );
 }
