@@ -15,12 +15,18 @@
 
 .button {
   margin: 5px;
+  color: white;
+  background-color: rgb(116, 122, 196);
 }
 
 .inputs {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 250px;
+  margin: 5px;
 }
 
 .light-theme {

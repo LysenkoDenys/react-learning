@@ -1,8 +1,9 @@
 // import { useState } from 'react';
 import './App.css';
+import UseRefExample from './components/UseRefExample';
 // import CalculationWithoutMemo from './components/CalculationWithoutMemo';
 // import UseMemoCalculation from './components/UseMemoCalculation';
-import MeasuredHeight from './components/MeasuredHeight';
+// import MeasuredHeight from './components/MeasuredHeight';
 // import TestWithReference from './components/TestWithReference';
 // import UserLoginControl from './components/UserLoginControl';
 // import CurrencyContext from './components/CurrencyContext';
@@ -90,7 +91,8 @@ function App() {
         <CalculationWithoutMemo numbers={myArray} /> */}
       {/* <UseMemoCalculation numbers={myArray} /> */}
       {/* </div> */}
-      <MeasuredHeight />
+      {/* <MeasuredHeight /> */}
+      <UseRefExample />
     </>
   );
 }
