@@ -1,6 +1,7 @@
 // import { useState } from 'react';
 import './App.css';
-import UseRefExample from './components/UseRefExample';
+import StatefulForm from './components/StatefulForm';
+// import UseRefExample from './components/UseRefExample';
 // import CalculationWithoutMemo from './components/CalculationWithoutMemo';
 // import UseMemoCalculation from './components/UseMemoCalculation';
 // import MeasuredHeight from './components/MeasuredHeight';
@@ -92,7 +93,8 @@ function App() {
       {/* <UseMemoCalculation numbers={myArray} /> */}
       {/* </div> */}
       {/* <MeasuredHeight /> */}
-      <UseRefExample />
+      {/* <UseRefExample /> */}
+      <StatefulForm />
     </>
   );
 }

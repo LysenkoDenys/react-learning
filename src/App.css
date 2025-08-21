@@ -3,6 +3,12 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  --bg: #ffffff;
+  --fg: #111827;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --primary: #3b82f6;
+  --error: #ef4444;
 }
 
 .input-text,
@@ -69,4 +75,77 @@
   height: 50%;
   padding: 20%;
   border-radius: 12px;
+}
+
+/* Layout */
+form {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 1.25rem 1rem;
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Your existing spacing helper */
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+/* Field blocks */
+form > div + div {
+  margin-top: 1rem;
+} /* extra vertical rhythm */
+
+/* Labels */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputs */
+input[type='text'],
+input[type='email'] {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--focus-shadow);
+}
+
+/* Disabled state */
+input:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Optional error + loading states (apply .is-error / .is-loading to <form> or a field wrapper) */
+.is-error input {
+  border-color: var(--error);
+  box-shadow: 0 0 0 4px var(--error-shadow);
+}
+
+.is-loading {
+  opacity: 0.7;
+  pointer-events: none;
+  user-select: none;
+  cursor: progress;
 }
