@@ -1,6 +1,7 @@
 // import { useState } from 'react';
 import './App.css';
-import StatefulForm from './components/StatefulForm';
+import LongList from './components/LongList';
+// import StatefulForm from './components/StatefulForm';
 // import UseRefExample from './components/UseRefExample';
 // import CalculationWithoutMemo from './components/CalculationWithoutMemo';
 // import UseMemoCalculation from './components/UseMemoCalculation';
@@ -94,7 +95,8 @@ function App() {
       {/* </div> */}
       {/* <MeasuredHeight /> */}
       {/* <UseRefExample /> */}
-      <StatefulForm />
+      {/* <StatefulForm /> */}
+      <LongList />
     </>
   );
 }
