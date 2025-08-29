@@ -1,6 +1,9 @@
 // import { useState } from 'react';
+import { useRef } from 'react';
 import './App.css';
-import LongList from './components/LongList';
+import CustomInput from './components/CustomInput';
+import type { CustomInput as CustomInputType } from './components/CustomInput';
+// import LongList from './components/LongList';
 // import StatefulForm from './components/StatefulForm';
 // import UseRefExample from './components/UseRefExample';
 // import CalculationWithoutMemo from './components/CalculationWithoutMemo';
@@ -22,6 +25,20 @@ import LongList from './components/LongList';
 // import UserProfile from './components/UserProfile';
 
 function App() {
+  const inputRef = useRef<CustomInputType>(null);
+
+  const handleFocus = () => {
+    inputRef.current?.focus();
+  };
+
+  const handleClear = () => {
+    inputRef.current?.clear();
+  };
+
+  const handleValue = () => {
+    inputRef.current?.setValue();
+  };
+
   // const [price, setPrice] = useState(0);
   // const [isDark, setIsDark] = useState(false);
   // const [count, setCount] = useState(0);
@@ -96,7 +113,17 @@ function App() {
       {/* <MeasuredHeight /> */}
       {/* <UseRefExample /> */}
       {/* <StatefulForm /> */}
-      <LongList />
+      {/* <LongList /> */}
+      <CustomInput ref={inputRef} />
+      <button className="button" onClick={handleFocus}>
+        Focus input
+      </button>
+      <button className="button" onClick={handleClear}>
+        Clear input
+      </button>
+      <button className="button" onClick={handleValue}>
+        Set value
+      </button>
     </>
   );
 }
