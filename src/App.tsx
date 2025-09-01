@@ -1,8 +1,9 @@
 // import { useState } from 'react';
-import { useRef } from 'react';
+// import { useRef } from 'react';
 import './App.css';
-import CustomInput from './components/CustomInput';
-import type { CustomInput as CustomInputType } from './components/CustomInput';
+// import CustomInput from './components/CustomInput';
+// import type { CustomInput as CustomInputType } from './components/CustomInput';
+import SlowRenderingList from './components/SlowRenderingList';
 // import LongList from './components/LongList';
 // import StatefulForm from './components/StatefulForm';
 // import UseRefExample from './components/UseRefExample';
@@ -25,19 +26,19 @@ import type { CustomInput as CustomInputType } from './components/CustomInput';
 // import UserProfile from './components/UserProfile';
 
 function App() {
-  const inputRef = useRef<CustomInputType>(null);
+  // const inputRef = useRef<CustomInputType>(null);
 
-  const handleFocus = () => {
-    inputRef.current?.focus();
-  };
+  // const handleFocus = () => {
+  //   inputRef.current?.focus();
+  // };
 
-  const handleClear = () => {
-    inputRef.current?.clear();
-  };
+  // const handleClear = () => {
+  //   inputRef.current?.clear();
+  // };
 
-  const handleValue = () => {
-    inputRef.current?.setValue();
-  };
+  // const handleValue = () => {
+  //   inputRef.current?.setValue();
+  // };
 
   // const [price, setPrice] = useState(0);
   // const [isDark, setIsDark] = useState(false);
@@ -114,7 +115,7 @@ function App() {
       {/* <UseRefExample /> */}
       {/* <StatefulForm /> */}
       {/* <LongList /> */}
-      <CustomInput ref={inputRef} />
+      {/* <CustomInput ref={inputRef} />
       <button className="button" onClick={handleFocus}>
         Focus input
       </button>
@@ -123,7 +124,8 @@ function App() {
       </button>
       <button className="button" onClick={handleValue}>
         Set value
-      </button>
+      </button> */}
+      <SlowRenderingList />
     </>
   );
 }
